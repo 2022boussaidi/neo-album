@@ -25,3 +25,7 @@ A simple photo album application built with Flask and PostgreSQL.
    >>> from app import db
    >>> db.create_all()
    >>> exit()
+4. docker-compose exec db1 psql -U neonumy -d neonumy -c "SELECT * FROM photo;"
+
+## run tests
+1. pytest -v

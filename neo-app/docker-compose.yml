@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  db:
+  db1:
     image: postgres:13
     environment:
       POSTGRES_DB: neonumy
@@ -12,7 +12,7 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
-  web:
+  web1:
     build: .
     command: python app.py
     volumes:
@@ -20,9 +20,9 @@ services:
     ports:
       - "5000:5000"
     depends_on:
-      - db
+      - db1
     environment:
-      - DATABASE_URL=postgresql://neonumy:neonumy@db:5432/neonumy
+      - DATABASE_URL=postgresql://neonumy:neonumy@db1:5432/neonumy
 
 
 volumes:
