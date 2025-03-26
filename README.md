@@ -27,5 +27,11 @@ A simple photo album application built with Flask and PostgreSQL.
    >>> exit()
 4. docker-compose exec db1 psql -U neonumy -d neonumy -c "SELECT * FROM photo;"
 
+## Access the Web Application
+http://localhost:5000
+
+## Check GraphQL API 
+http://localhost:5000/graphql
+
 ## run tests
 1. pytest -v
